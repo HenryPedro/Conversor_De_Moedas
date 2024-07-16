@@ -12,7 +12,7 @@ import java.net.http.HttpResponse;
 public class ConsomeAPI {
     public static Moeda Consultarmoeda(String primeiraMoeda, String segundaMoeda, String nomeDaMoeda) throws IOException, InterruptedException {
 
-        String API_KEY = "&apikey=6585022c";
+        String API_KEY = "${SET_YOUR_API}";
         String ENDERECO = "https://v6.exchangerate-api.com/v6/" + API_KEY + "/pair/" + primeiraMoeda + "/" + segundaMoeda;
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
